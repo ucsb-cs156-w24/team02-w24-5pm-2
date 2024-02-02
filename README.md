@@ -15,8 +15,8 @@ Instructions: <https://ucsb-cs156.github.io/w24/lab/team02.html>
 
 Deployments:
 
-* Prod: <http://team02.dokku-06.cs.ucsb.edu>
-* QA: <http://team02-qa.dokku-06.cs.ucsb.edu>
+* Prod: <https://team02.dokku-06.cs.ucsb.edu>
+* QA: <https://team02-qa.dokku-06.cs.ucsb.edu>
 
 # Setup before running application
 
