@@ -44,7 +44,7 @@ public class ArticlesControllerTests extends ControllerTestCase {
         @MockBean
         UserRepository userRepository;
 
-        // Tests for GET /api/ucsbdates/all
+        // Tests for GET /api/articles/all
         
         @Test
         public void logged_out_users_cannot_get_all() throws Exception {
@@ -81,7 +81,7 @@ public class ArticlesControllerTests extends ControllerTestCase {
                                 .url("https://www.nytimes.com/wirecutter/reviews/board-games-we-love/")
                                 .explanation("suggestions for board games")
                                 .email("jiaqiguan@ucsb.edu")
-                                .dateAdded(ldt1)
+                                .dateAdded(ldt2)
                                 .build();
 
                 ArrayList<Articles> expectedArticles = new ArrayList<>();
@@ -101,7 +101,7 @@ public class ArticlesControllerTests extends ControllerTestCase {
                 assertEquals(expectedJson, responseString);
         }
 
-        // Tests for POST /api/ucsbdates/post...
+        // Tests for POST /api/articles/post...
 
         @Test
         public void logged_out_users_cannot_post() throws Exception {
