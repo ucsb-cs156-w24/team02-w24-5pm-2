@@ -26,4 +26,5 @@ public class MenuItemReview {
   private String reviewerEmail;
   private int stars;
   private LocalDateTime dateReviewed;
+  private String comments;
 }
