@@ -1,0 +1,62 @@
+{
+    "databaseChangeLog": [
+      {
+        "changeSet": {
+          "id": "UCSBOrganizations-1",
+          "author": "OliviaC",
+          "preConditions": [
+            {
+              "onFail": "MARK_RAN"
+            },
+            {
+              "not": [
+                {
+                  "tableExists": {
+                    "tableName": "UCSBORGANIZATIONS"
+                  }
+                }
+              ]
+            }
+          ],
+          "changes": [
+            {
+              "createTable": {
+                "columns": [
+                  {
+                    "column": {
+                      "autoIncrement": true,
+                      "constraints": {
+                        "primaryKey": true,
+                        "primaryKeyName": "CONSTRAINT_9"
+                      },
+                      "name": "ORGCODE",
+                      "type": "STRING"
+                    }
+                  },
+                  {
+                    "column": {
+                      "name": "ORGTRANSLATIONSHORT",
+                      "type": "STRING"
+                    }
+                  },
+                  {
+                    "column": {
+                      "name": "ORGTRANSLATION",
+                      "type": "STRING"
+                    }
+                  },
+                  {
+                    "column": {
+                      "name": "INACTIVE",
+                      "type": "BOOLEAN"
+                    }
+                  }
+                ],
+                "tableName": "UCSBORGANIZATIONS"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
