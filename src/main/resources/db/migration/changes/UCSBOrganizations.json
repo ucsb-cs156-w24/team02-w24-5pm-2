@@ -30,19 +30,19 @@
                         "primaryKeyName": "CONSTRAINT_9"
                       },
                       "name": "ORGCODE",
-                      "type": "STRING"
+                      "type": "VARCHAR(255)"
                     }
                   },
                   {
                     "column": {
                       "name": "ORGTRANSLATIONSHORT",
-                      "type": "STRING"
+                      "type": "VARCHAR(255)"
                     }
                   },
                   {
                     "column": {
                       "name": "ORGTRANSLATION",
-                      "type": "STRING"
+                      "type": "VARCHAR(255)"
                     }
                   },
                   {
