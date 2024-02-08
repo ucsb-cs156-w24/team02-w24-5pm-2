@@ -17,7 +17,7 @@ import lombok.Builder;
 @NoArgsConstructor
 @Builder
 @Entity(name = "ucsbrecommendationrequest")
-public class UCSBRecommendationRequest {
+public class RecommendationRequest {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long id;
