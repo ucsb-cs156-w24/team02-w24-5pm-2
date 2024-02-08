@@ -35,19 +35,13 @@
                   },
                   {
                     "column": {
-                      "name": "DATEREVIEWED",
-                      "type": "TIMESTAMP"
-                    }
-                  },
-                  {
-                    "column": {
-                      "name": "ITEMID",
+                      "name": "ITEM_ID",
                       "type": "BIGINT"
                     }
                   },
                   {
                     "column": {
-                      "name": "COMMENTS",
+                      "name": "REVIEWER_EMAIL",
                       "type": "VARCHAR(255)"
                     }
                   },
@@ -59,8 +53,14 @@
                   },
                   {
                     "column": {
-                      "name": "REVIEWEREMAIL",
+                      "name": "COMMENTS",
                       "type": "VARCHAR(255)"
+                    }
+                  },
+                  {
+                    "column": {
+                      "name": "DATE_REVIEWED",
+                      "type": "TIMESTAMP"
                     }
                   }
                 ],
