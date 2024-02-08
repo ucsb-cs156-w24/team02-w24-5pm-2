@@ -7,7 +7,6 @@ import edu.ucsb.cs156.example.repositories.MenuItemReviewRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import liquibase.pro.packaged.in;
 import lombok.extern.slf4j.Slf4j;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -32,7 +31,7 @@ import java.time.LocalDateTime;
 @RequestMapping("/api/menuitemreviews")
 @RestController
 @Slf4j
-public class MenuItemReviewController {
+public class MenuItemReviewController extends ApiController {
     @Autowired
     MenuItemReviewRepository menuItemReviewRepository;
 
@@ -47,7 +46,7 @@ public class MenuItemReviewController {
     @Operation(summary= "Create a new menu item review")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/post")
-    public MenuItemReview postCommons(
+    public MenuItemReview postReview(
         @Parameter(name="itemId") @RequestParam long itemId,
         @Parameter(name="reviewerEmail") @RequestParam String reviewerEmail,
         @Parameter(name="stars") @RequestParam int stars,
@@ -69,6 +68,16 @@ public class MenuItemReviewController {
         return savedReviews;
     }
 
+    @Operation(summary= "Get a single menu item review")
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @GetMapping("")
+    public MenuItemReview getById(
+            @Parameter(name="id") @RequestParam Long id) {
+        MenuItemReview review = menuItemReviewRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(MenuItemReview.class, id));
+
+        return review;
+    }
     
 
 }
