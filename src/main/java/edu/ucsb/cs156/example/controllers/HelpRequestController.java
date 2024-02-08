@@ -77,5 +77,16 @@ public class HelpRequestController extends ApiController {
         return savedHelpRequest;
     }
 
+    @Operation(summary= "Get a single help request by ID")
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @GetMapping("")
+    public HelpRequest getById(
+            @Parameter(name="id") @RequestParam Long id) {
+        HelpRequest helpRequest = helpRequestRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(HelpRequest.class, id));
+
+        return helpRequest;
+    }
+
 }
 
