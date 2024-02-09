@@ -27,7 +27,7 @@
                       "autoIncrement": true,
                       "constraints": {
                         "primaryKey": true,
-                        "primaryKeyName": "CONSTRAINT_8"
+                        "primaryKeyName": "CONSTRAINT_22"
                       },
                       "name": "ID",
                       "type": "BIGINT"
