@@ -46,6 +46,9 @@
                   },
                   {
                     "column": {
+		      "constraints": {
+                        "nullable": false
+                      },
                       "name": "INACTIVE",
                       "type": "BOOLEAN"
                     }
