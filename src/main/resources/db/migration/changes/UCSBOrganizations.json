@@ -2,8 +2,8 @@
     "databaseChangeLog": [
       {
         "changeSet": {
-          "id": "UCSBOrganizations-1",
-          "author": "OliviaC",
+          "id": "UCSB_ORGANIZATIONS-1",
+          "author": "Olivia_C",
           "preConditions": [
             {
               "onFail": "MARK_RAN"
@@ -12,7 +12,7 @@
               "not": [
                 {
                   "tableExists": {
-                    "tableName": "UCSBORGANIZATIONS"
+                    "tableName": "UCSB_ORGANIZATIONS"
                   }
                 }
               ]
@@ -26,21 +26,21 @@
                     "column": {
                       "constraints": {
                         "primaryKey": true,
-                        "primaryKeyName": "CONSTRAINT_9"
+                        "primaryKeyName": "UCSB_ORG_CODE"
                       },
-                      "name": "ORGCODE",
+                      "name": "ORG_CODE",
                       "type": "VARCHAR(255)"
                     }
                   },
                   {
                     "column": {
-                      "name": "ORGTRANSLATIONSHORT",
+                      "name": "ORG_TRANSLATION_SHORT",
                       "type": "VARCHAR(255)"
                     }
                   },
                   {
                     "column": {
-                      "name": "ORGTRANSLATION",
+                      "name": "ORG_TRANSLATION",
                       "type": "VARCHAR(255)"
                     }
                   },
@@ -51,7 +51,7 @@
                     }
                   }
                 ],
-                "tableName": "UCSBORGANIZATIONS"
+                "tableName": "UCSB_ORGANIZATIONS"
               }
             }
           ]
