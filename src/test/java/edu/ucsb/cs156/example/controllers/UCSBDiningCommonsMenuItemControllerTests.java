@@ -249,8 +249,8 @@ public class UCSBDiningCommonsMenuItemControllerTests extends ControllerTestCase
                                 .build();
 
                 UCSBDiningCommonsMenuItem ucsbItemEdited = UCSBDiningCommonsMenuItem.builder()
-                                .name("Cream of Broccoli Soup (v)")
-                                .station("Greens & Grains")
+                                .name("Cream of Broccoli Soup")
+                                .station("Green & Grain")
                                 .diningCommonsCode("carrillo")
                                 .build();
 
