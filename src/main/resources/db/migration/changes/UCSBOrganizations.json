@@ -2,8 +2,8 @@
     "databaseChangeLog": [
       {
         "changeSet": {
-          "id": "UCSB_ORGANIZATIONS-1",
-          "author": "Olivia_C",
+          "id": "UCSBORGANIZATIONS-1",
+          "author": "OliviaC",
           "preConditions": [
             {
               "onFail": "MARK_RAN"
@@ -12,7 +12,7 @@
               "not": [
                 {
                   "tableExists": {
-                    "tableName": "UCSB_ORGANIZATIONS"
+                    "tableName": "UCSBORGANIZATIONS"
                   }
                 }
               ]
@@ -51,7 +51,7 @@
                     }
                   }
                 ],
-                "tableName": "UCSB_ORGANIZATIONS"
+                "tableName": "UCSBORGANIZATIONS"
               }
             }
           ]
