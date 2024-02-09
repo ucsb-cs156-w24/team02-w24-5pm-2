@@ -24,6 +24,7 @@
                 "columns": [
                   {
                     "column": {
+		      "autoIncrement": true,
                       "constraints": {
                         "primaryKey": true,
                         "primaryKeyName": "UCSB_ORG_CODE"
