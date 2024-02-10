@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-w24/team02-w24-5pm-2
 owner: ucsb-cs156-w24
 repo_name: team02-w24-5pm-2
-pull_requests: [{"author":{"id":"U_kgDOBqdaoA","is_bot":false,"login":"MeronDT","name":""},"headRefName":"Meron-RecRequestTablePUT","number":69,"title":"Add RecommendationRequest PUT endpoint","url":"https://github.com/ucsb-cs156-w24/team02-w24-5pm-2/pull/69"},{"author":{"id":"U_kgDOBqdaoA","is_bot":false,"login":"MeronDT","name":""},"headRefName":"Meron-RecRequestTableDELETE","number":68,"title":"Add Recommendation Request DELETE endpoint","url":"https://github.com/ucsb-cs156-w24/team02-w24-5pm-2/pull/68"},{"author":{"id":"U_kgDOByAtbA","is_bot":false,"login":"livitsimple","name":""},"headRefName":"Olivia-UCSBOrganizationTable","number":51,"title":"Create database table for UCSBOrganization","url":"https://github.com/ucsb-cs156-w24/team02-w24-5pm-2/pull/51"}]
+pull_requests: [{"author":{"id":"U_kgDOByAtbA","is_bot":false,"login":"livitsimple","name":""},"headRefName":"Olivia-UCSBOrganizationTable","number":51,"title":"Create database table for UCSBOrganization","url":"https://github.com/ucsb-cs156-w24/team02-w24-5pm-2/pull/51"}]
