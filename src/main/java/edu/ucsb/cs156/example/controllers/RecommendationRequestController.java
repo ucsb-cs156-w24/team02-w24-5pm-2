@@ -98,4 +98,26 @@ public class RecommendationRequestController extends ApiController {
                 RecommendationRequestRepository.delete(request);
         return genericMessage("RecommendationRequest with id %s deleted".formatted(id));
     }
+
+    @Operation(summary= "Update a recommendation request ")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @PutMapping("")
+    public RecommendationRequest updateRecommendationRequest(
+            @Parameter(name="id") @RequestParam Long id,
+            @RequestBody @Valid RecommendationRequest incoming) {
+
+        RecommendationRequest request = RecommendationRequestRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(RecommendationRequest.class, id));
+
+        request.setRequesterEmail(incoming.getRequesterEmail());
+        request.setProfessorEmail(incoming.getProfessorEmail());
+        request.setExplanation(incoming.getExplanation());
+        request.setDateRequested(incoming.getDateRequested());
+        request.setDateNeeded(incoming.getDateNeeded());
+        request.setDone(incoming.getDone());
+
+        RecommendationRequestRepository.save(request);
+
+        return request;
+    }
 }
