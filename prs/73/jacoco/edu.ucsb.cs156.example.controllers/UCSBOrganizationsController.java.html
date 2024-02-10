@@ -84,25 +84,25 @@ import javax.validation.Valid;
     }
 
 
-    @Operation(summary= &quot;Update a UCSBOrganizations&quot;)
+    @Operation(summary= &quot;Update a single UCSBOrganization&quot;)
     @PreAuthorize(&quot;hasRole('ROLE_ADMIN')&quot;)
     @PutMapping(&quot;&quot;)
     public UCSBOrganizations updateOrganizations(
-            @Parameter(name=&quot;orgCode&quot;) @RequestParam String orgCode,
+            @Parameter(name=&quot;code&quot;) @RequestParam String code,
             @RequestBody @Valid UCSBOrganizations incoming) {
 
-<span class="fc" id="L94">        UCSBOrganizations commons = ucsbOrganizationsRepository.findById(orgCode)</span>
-<span class="fc" id="L95">                .orElseThrow(() -&gt; new EntityNotFoundException(UCSBOrganizations.class, orgCode));</span>
+<span class="fc" id="L94">        UCSBOrganizations organization = ucsbOrganizationsRepository.findById(code)</span>
+<span class="fc" id="L95">                .orElseThrow(() -&gt; new EntityNotFoundException(UCSBOrganizations.class, code));</span>
 
 
-<span class="fc" id="L98">        commons.setOrgCode(incoming.getOrgCode());</span>
-<span class="fc" id="L99">        commons.setOrgTranslationShort(incoming.getOrgTranslationShort());</span>
-<span class="fc" id="L100">        commons.setOrgTranslation(incoming.getOrgTranslation());</span>
-<span class="fc" id="L101">        commons.setInactive(incoming.getInactive());</span>
+<span class="fc" id="L98">        organization.setOrgCode(incoming.getOrgCode());</span>
+<span class="fc" id="L99">        organization.setOrgTranslationShort(incoming.getOrgTranslationShort());</span>
+<span class="fc" id="L100">        organization.setOrgTranslation(incoming.getOrgTranslation());</span>
+<span class="fc" id="L101">        organization.setInactive(incoming.getInactive());</span>
 
-<span class="fc" id="L103">        ucsbOrganizationsRepository.save(commons);</span>
+<span class="fc" id="L103">        ucsbOrganizationsRepository.save(organization);</span>
 
-<span class="fc" id="L105">        return commons;</span>
+<span class="fc" id="L105">        return organization;</span>
     }
 
 }
