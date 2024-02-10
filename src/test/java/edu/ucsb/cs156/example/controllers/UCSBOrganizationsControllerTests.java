@@ -255,8 +255,8 @@ public class UCSBOrganizationsControllerTests extends ControllerTestCase {
                                 .build();
 
                        UCSBOrganizations volleyballEdited = UCSBOrganizations.builder()
-                                .orgCode("VC")
-                                .orgTranslationShort("VOLLEYBALL")
+                                .orgCode("VCB")
+                                .orgTranslationShort("VOLLEY")
                                 .orgTranslation("UCSB VOLLEYBALL CLUB")
                                 .inactive(false)
                                 .build();
@@ -267,7 +267,7 @@ public class UCSBOrganizationsControllerTests extends ControllerTestCase {
 
                       // act
                       MvcResult response = mockMvc.perform(
-                                put("/api/ucsborganizations?orgCode=VC")
+                                put("/api/ucsborganizations?code=VC")
                                                 .contentType(MediaType.APPLICATION_JSON)
                                                 .characterEncoding("utf-8")
                                                 .content(requestBody)
@@ -300,7 +300,7 @@ public class UCSBOrganizationsControllerTests extends ControllerTestCase {
 
                      // act
                      MvcResult response = mockMvc.perform(
-                                put("/api/ucsborganizations?orgCode=PC")
+                                put("/api/ucsborganizations?code=PC")
                                                 .contentType(MediaType.APPLICATION_JSON)
                                                 .characterEncoding("utf-8")
                                                 .content(requestBody)
