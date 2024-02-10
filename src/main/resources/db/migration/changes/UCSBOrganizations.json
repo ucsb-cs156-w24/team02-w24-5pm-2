@@ -27,7 +27,7 @@
                       "autoIncrement": true,
                       "constraints": {
                         "primaryKey": true,
-                        "primaryKeyName": "CONSTRAINT_9"
+                        "primaryKeyName": "UCSB_CONSTRAINT_37"
                       },
                       "name": "ORGCODE",
                       "type": "VARCHAR(255)"
