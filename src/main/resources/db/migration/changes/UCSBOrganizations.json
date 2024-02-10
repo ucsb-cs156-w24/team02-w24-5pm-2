@@ -24,10 +24,8 @@
                 "columns": [
                   {
                     "column": {
-		      "autoIncrement": true,
                       "constraints": {
-                        "primaryKey": true,
-                        "primaryKeyName": "UCSB_ORG_CODE"
+                        "primaryKey": true
                       },
                       "name": "ORG_CODE",
                       "type": "VARCHAR(255)"
