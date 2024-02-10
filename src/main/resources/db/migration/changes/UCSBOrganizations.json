@@ -2,8 +2,8 @@
     "databaseChangeLog": [
       {
         "changeSet": {
-          "id": "UCSBDates-1",
-          "author": "MattP",
+          "id": "UCSBOrganizations-1",
+          "author": "OliviaC",
           "preConditions": [
             {
               "onFail": "MARK_RAN"
@@ -12,7 +12,7 @@
               "not": [
                 {
                   "tableExists": {
-                    "tableName": "UCSBDATES"
+                    "tableName": "UCSBORGANIZATIONS"
                   }
                 }
               ]
@@ -24,35 +24,34 @@
                 "columns": [
                   {
                     "column": {
-                      "autoIncrement": true,
                       "constraints": {
                         "primaryKey": true,
-                        "primaryKeyName": "CONSTRAINT_5"
+                        "primaryKeyName": "UCSB_CONSTRAINT_37"
                       },
-                      "name": "ID",
-                      "type": "BIGINT"
-                    }
-                  },
-                  {
-                    "column": {
-                      "name": "LOCAL_DATE_TIME",
-                      "type": "TIMESTAMP"
-                    }
-                  },
-                  {
-                    "column": {
-                      "name": "NAME",
+                      "name": "ORG_CODE",
                       "type": "VARCHAR(255)"
                     }
                   },
                   {
                     "column": {
-                      "name": "QUARTERYYYYQ",
+                      "name": "ORG_TRANSLATION_SHORT",
                       "type": "VARCHAR(255)"
+                    }
+                  },
+                  {
+                    "column": {
+                      "name": "ORG_TRANSLATION",
+                      "type": "VARCHAR(255)"
+                    }
+                  },
+                  {
+                    "column": {
+                      "name": "INACTIVE",
+                      "type": "BOOLEAN"
                     }
                   }
                 ],
-                "tableName": "UCSBDATES"
+                "tableName": "UCSBORGANIZATIONS"
               }
             }
           ]
