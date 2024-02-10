@@ -287,20 +287,20 @@ public class UCSBOrganizationsControllerTests extends ControllerTestCase {
              public void admin_cannot_edit_organizations_that_does_not_exist() throws Exception {
                      // arrange
 
-                     UCSBOrganizations editedSoccer = UCSBOrganizations.builder()
-                                .orgCode("SC")
-                                .orgTranslationShort("SOCCER")
-                                .orgTranslation("UCSB SOCCER CLUB")
+                     UCSBOrganizations editedPickleball = UCSBOrganizations.builder()
+                                .orgCode("PC")
+                                .orgTranslationShort("PICKLEBALL")
+                                .orgTranslation("UCSB PICKLEBALL CLUB")
                                 .inactive(false)
                                 .build();
 
-                     String requestBody = mapper.writeValueAsString(editedSoccer);
+                     String requestBody = mapper.writeValueAsString(editedPickleball);
 
-                     when(ucsbDiningCommonsRepository.findById(eq("SC"))).thenReturn(Optional.empty());
+                     when(ucsbOrganizationsRepository.findById(eq("PC"))).thenReturn(Optional.empty());
 
                      // act
                      MvcResult response = mockMvc.perform(
-                                put("/api/ucsborganizations?code=SC")
+                                put("/api/ucsborganizations?orgCode=PC")
                                                 .contentType(MediaType.APPLICATION_JSON)
                                                 .characterEncoding("utf-8")
                                                 .content(requestBody)
@@ -308,9 +308,9 @@ public class UCSBOrganizationsControllerTests extends ControllerTestCase {
                                 .andExpect(status().isNotFound()).andReturn();
 
                     // assert
-                    verify(ucsbOrganizationsRepository, times(1)).findById("SC");
+                    verify(ucsbOrganizationsRepository, times(1)).findById("PC");
                     Map<String, Object> json = responseToJson(response);
-                    assertEquals("UCSBOrganizations with id SC not found", json.get("message"));
+                    assertEquals("UCSBOrganizations with id PC not found", json.get("message"));
 
             }
 
